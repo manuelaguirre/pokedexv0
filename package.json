@@ -1,0 +1,11 @@
+{
+  "name": "pokedexv0",
+  "version": "1.0.0",
+  "description": "pokedex",
+  "main": "main.js",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -o dist/style.css"
+  },
+  "author": "manuel aguirre",
+  "license": "ISC"
+}
