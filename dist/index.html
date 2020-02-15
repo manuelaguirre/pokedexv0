@@ -8,19 +8,44 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="bg-blue-400 align-middle">
-        <div class="md:flex mx-auto bg-red-100 justify-center h-screen md:p-4 lg:p-8 h-screen">
-            <div id="pokemon-display"class="md:m-6 lg:m-8 md:w-1/2 bg-green-700 rounded">pokemon-display</div>
-            <div id="pokemon-card" class="flex md:m-6 lg:m-8 md:w-1/2 bg-indigo-700 rounded">pokemon-card
-            <div id="pokemon-id">#1</div>
-            <div id="pokemon-name">Bulbasaur</div>
-            <div id="pokemon-weight">100</div>
-            <div id="pokemon-stats">sp-attack 60</div>
-            <div id="pokemon-types">Poison</div>
-        </div>
-        
-          </div>
+        <div class="md:flex mx-auto bg-red-100 justify-center h-screen md:p-4
+            lg:p-8 h-screen">
+            <div id="pokemon-display" class="md:m-6 lg:m-8 md:w-1/2 bg-green-700
+                rounded">pokemon-display</div>
 
-          <script src="main.js" type="module"></script>
-        </body>
-        </html>
-    
+            <div id="pokemon-card" class="md:m-6 lg:m-8 md:w-1/2
+                bg-indigo-700 rounded">
+
+                <div id="card-header" class="block w-full">
+                    <div id="pokemon-sprite" class="inline-flex border-black
+                        border-2">Bulbasaur</div>
+                    <div id="pokemon-id" class="inline-flex border-black
+                        border-2">#1</div>
+                    <div id="pokemon-name" class="inline-flex border-black
+                        border-2">Bulbasaur</div></div>
+                <div id="pokemon-weight" class="block border-black border-2">100</div>
+                <table id="pokemon-stats" class="table-auto block border-black
+                    border-2">
+                    <tbody>
+                        <tr><td>Speed</td>
+                            <td id="speed-stat">25</td></tr>
+                        <tr><td>Sp. Def</td>
+                            <td id="spdef-stat">35</td></tr>
+                        <tr><td>Sp. Atk</td>
+                            <td id="spatk-stat">28</td></tr>
+                        <tr><td>Attack</td>
+                            <td id="attack-stat">29</td></tr>
+                        <tr><td>Defense</td>
+                            <td id="defense-stat">40</td></tr>
+                        <tr><td>HP</td>
+                            <td id="hp-stat">50</td></tr>
+                    </tbody>
+                </table>
+                <div id="pokemon-types" class="block border-black border-2">Poison</div>
+            </div>
+
+        </div>
+
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
