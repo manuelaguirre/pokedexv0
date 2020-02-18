@@ -4,3 +4,6 @@
 
 @tailwind utilities;
 
+.active{
+    background-color: gainsboro;
+}
