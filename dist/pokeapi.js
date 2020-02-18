@@ -12,12 +12,12 @@ function filterPokeJSON(pokeJSON) {
   return filteredJSON;
 }
 
-export function getPokemonList(offset = 0, limit = 5) {
+export async function getPokemonList(offset = 0, limit = 5) {
   return fetch(`${BASE_URL}pokemon/?limit=${limit}&offset=${offset}`)
     .then((response) => response.json());
 }
 
-export function getPokemonInfo(pokemonID) {
+export async function getPokemonInfo(pokemonID) {
   const requestURL = `${BASE_URL}pokemon/${pokemonID}`;
 
   return fetch(requestURL)
