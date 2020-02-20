@@ -8,11 +8,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="bg-blue-400 align-middle">
-        <div class="md:flex mx-auto bg-red-100 justify-center md:p-4
-            lg:p-8">
-            <div id="pokemon-list-container" class="md:m-6 lg:m-8 md:w-1/2
-                bg-green-700
-                rounded"><ul id="pokemon-list" class="list-reset flex flex-col">
+        <div class="md:flex mx-auto bg-red-100 justify-center p-4
+            max-w-3xl">
+            <div id="pokemon-list-container" class="m-8 w-1/2
+                bg-teal-600 rounded"><ul id="pokemon-list" class="list-reset
+                    flex flex-col">
                     <li class="pokemon-list-item rounded-t relative -mb-px block
                         border p-4
                         border-grey"><div class="list-sprite h-6 w-10
@@ -20,58 +20,60 @@
                             ml-4"><img
                                 class="object-scale-down" src=""
                                 alt=""></div><div
-                            class="pokemon-list-name inline-block">name-1</div></li>
+                            class="pokemon-list-name capitalize inline-block">name-1</div></li>
                     <li class="pokemon-list-item relative -mb-px block border
                         p-4 border-grey"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
-                            class="pokemon-list-name inline-block">name-2</div></li>
+                            class="pokemon-list-name capitalize inline-block">name-2</div></li>
                     <li class="pokemon-list-item relative -mb-px block border
                         p-4
                         border-grey"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
-                            class="pokemon-list-name inline-block">name-3</div></li>
+                            class="pokemon-list-name capitalize inline-block">name-3</div></li>
                     <li class="pokemon-list-item relative -mb-px block border
                         p-4 border-grey"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
-                            class="pokemon-list-name inline-block">name-4</div></li>
+                            class="pokemon-list-name capitalize inline-block">name-4</div></li>
                     <li class="pokemon-list-item rounded-b relative block border
                         p-4 border-grey"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
-                            class="pokemon-list-name inline-block">name-5</div></li>
+                            class="pokemon-list-name capitalize inline-block">name-5</div></li>
                 </ul></div>
 
-            <div id="pokemon-card" class="md:m-6 lg:m-8 md:w-1/2
-                bg-indigo-700 rounded">
+            <div id="pokemon-card" class="m-8 w-1/2
+                bg-indigo-400 rounded">
 
                 <div id="card-header" class="block w-full py-4">
-                    <div id="pokemon-sprite" class="inline-flex border-black
-                        border-2 align-middle"><img src="" alt=""></div>
-                    <div id="pokemon-id" class="inline-flex border-black
-                        border-2 align-middle font-extrabold text-3xl">#1</div>
-                    <div id="pokemon-name" class="inline-flex border-black
-                        border-2 align-middle float-right text-2xl">Bulbasaur</div></div>
-                <div id="pokemon-weight" class="block border-black border-2">100</div>
-                <table id="pokemon-stats" class="table-auto block border-black
-                    border-2">
+                    <div id="pokemon-sprite" class="inline-flex
+                        align-middle"><img src="" alt=""></div>
+                    <div id="pokemon-id" class="inline-flex
+                        align-middle font-extrabold text-3xl">#1</div>
+                    <div id="pokemon-name" class="inline-flex
+                        align-middle float-right text-2xl capitalize">Bulbasaur</div></div>
+                <div id="pokemon-weight" class="block">100</div>
+                <div class="inline-flex justify-between w-full"> <table
+                        id="pokemon-stats" class="table-auto inline-flex">
 
-                    <tr><td>Speed</td>
-                        <td id="speed-stat" class="pokemon-stat">25</td></tr>
-                    <tr><td>Sp. Def</td>
-                        <td id="spdef-stat" class="pokemon-stat">35</td></tr>
-                    <tr><td>Sp. Atk</td>
-                        <td id="spatk-stat" class="pokemon-stat">28</td></tr>
-                    <tr><td>Attack</td>
-                        <td id="attack-stat" class="pokemon-stat">29</td></tr>
-                    <tr><td>Defense</td>
-                        <td id="defense-stat" class="pokemon-stat">40</td></tr>
-                    <tr><td>HP</td>
-                        <td id="hp-stat" class="pokemon-stat">50</td></tr>
-                </table>
-                <div id="pokemon-types" class="block border-black border-2">Poison</div>
+                        <tr><td>Speed</td>
+                            <td id="speed-stat" class="pokemon-stat">25</td></tr>
+                        <tr><td>Sp. Def</td>
+                            <td id="spdef-stat" class="pokemon-stat">35</td></tr>
+                        <tr><td>Sp. Atk</td>
+                            <td id="spatk-stat" class="pokemon-stat">28</td></tr>
+                        <tr><td>Attack</td>
+                            <td id="attack-stat" class="pokemon-stat">29</td></tr>
+                        <tr><td>Defense</td>
+                            <td id="defense-stat" class="pokemon-stat">40</td></tr>
+                        <tr><td>HP</td>
+                            <td id="hp-stat" class="pokemon-stat">50</td></tr>
+                    </table> <div id="pokemon-types" class="block
+                        border-black
+                        border-2">Poison</div>
+                </div>
             </div>
 
         </div>

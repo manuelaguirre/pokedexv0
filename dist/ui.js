@@ -3,7 +3,7 @@
 import * as sprites from './sprites.js';
 import * as pokeapi from './pokeapi.js';
 
-function updateActiveListItem($item) {
+export function updateActiveListItem($item) {
   const $activeItem = document.querySelector('.pokemon-list-item.active');
   if ($activeItem) {
     $activeItem.classList.remove('active');
@@ -12,7 +12,7 @@ function updateActiveListItem($item) {
 }
 
 function getPokeIDFromURL(url) {
-  return url.match(/\d\d\d/);
+  return url.match(/\/\d\d*/)[0].substring(1); // returns the id number in the pokemon resource URL, avoiding the 2 in "../v2/..", after eliminating the preceding /
 }
 
 export async function showPokeCard(pokemonID) {
@@ -45,11 +45,11 @@ export async function showPokeCard(pokemonID) {
   }
 }
 
-export function showPokeList(pokeListJSON) {
+export async function showPokeList(offset = 0, limit = 5) {
   const $pokeEntries = document.querySelectorAll('.pokemon-list-name');
   const $pokeListSprites = document.querySelectorAll('.list-sprite>img');
-  const $pokeList = document.querySelector('#pokemon-list');
   const $pokeListItems = document.querySelectorAll('.pokemon-list-item');
+  const pokeListJSON = await pokeapi.getPokemonList(offset);
 
   for (let i = 0; i < pokeListJSON.results.length; i++) {
     $pokeEntries[i].innerHTML = pokeListJSON.results[i].name;
@@ -66,13 +66,4 @@ export function showPokeList(pokeListJSON) {
       showPokeCard(pokeID);
     });
   });
-}
-
-export function obtenerMonedaSeleccionada() {
-  const $activeItem = document.querySelector('.list-group-item.active');
-  if ($activeItem) {
-    return document.querySelector('.list-group-item.active').dataset.base;
-  }
-
-  return undefined;
 }
