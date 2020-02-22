@@ -25,3 +25,14 @@ window.showPokeCard = ui.showPokeCard;
 window.showPokeList = ui.showPokeList;
 
 init();
+
+/* TODO:
+        -flechas para la lista
+        -un input para ir directamente a cierto pokemon
+        
+
+
+
+
+
+*/
