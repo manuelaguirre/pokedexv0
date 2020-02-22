@@ -11,41 +11,65 @@
         <div class="md:flex m-auto bg-red-100 justify-center p-4
             max-w-3xl rounded-b">
 
-            <div id="pokemon-list-container" class="m-8 md:w-1/2
-                bg-teal-600 rounded align shadow-lg"><ul
+            <div id="pokemon-list-container" class="m-8 md:w-1/2 rounded align"><ul
                     id="pokemon-list"
                     class="list-reset
-                    flex flex-col">
-                    <li class="pokemon-list-item rounded-t relative -mb-px block
+                    flex flex-col shadow-lg">
+                    <li class="pokemon-list-item hover:shadow-inner rounded-t
+                        relative -mb-px block
                         border p-4
-                        border-grey"><div class="list-sprite h-6 w-10
+                        border-grey bg-teal-600"><div class="list-sprite h-6
+                            w-10
                             inline-block
                             ml-4"><img
                                 class="object-scale-down" src=""
                                 alt=""></div><div
                             class="pokemon-list-name capitalize inline-block">name-1</div></li>
-                    <li class="pokemon-list-item relative -mb-px block border
-                        p-4 border-grey"><div
+                    <li class="pokemon-list-item hover:shadow-inner relative
+                        -mb-px block border
+                        p-4 border-grey bg-teal-600"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
                             class="pokemon-list-name capitalize inline-block">name-2</div></li>
-                    <li class="pokemon-list-item relative -mb-px block border
+                    <li class="pokemon-list-item hover:shadow-inner relative
+                        -mb-px block border
                         p-4
-                        border-grey"><div
+                        border-grey bg-teal-600"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
                             class="pokemon-list-name capitalize inline-block">name-3</div></li>
-                    <li class="pokemon-list-item relative -mb-px block border
-                        p-4 border-grey"><div
+                    <li class="pokemon-list-item hover:shadow-inner relative
+                        -mb-px block border
+                        p-4 border-grey bg-teal-600"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
                             class="pokemon-list-name capitalize inline-block">name-4</div></li>
-                    <li class="pokemon-list-item rounded-b relative block border
-                        p-4 border-grey"><div
+                    <li class="pokemon-list-item hover:shadow-inner rounded-b
+                        relative block border
+                        p-4 border-grey bg-teal-600"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
                                 class="object-scale-down" src="" alt=""></div><div
                             class="pokemon-list-name capitalize inline-block">name-5</div></li>
-                </ul></div>
+                </ul>
+
+                <div id="button-container" class="flex justify-around mt-4">
+                    <button id="previous-button" class="block bg-teal-600
+                        hover:bg-teal-700
+                        text-white
+                        font-bold py-2 px-4 rounded-l-md rounded-r-sm w-24
+                        text-center">
+                        Previous
+                    </button>
+                    <span id="current-page" class="py-2 px-auto font-bold
+                        text-teal-900"></span>
+                    <button id="next-button" class="block bg-teal-600
+                        hover:bg-teal-700
+                        text-white
+                        font-bold py-2 px-4 rounded-l-sm rounded-r-md w-24
+                        text-center">
+                        Next
+                    </button>
+                </div></div>
 
             <div id="pokemon-card" class="m-8 md:w-1/2
                 bg-indigo-400 rounded shadow-lg">

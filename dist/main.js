@@ -11,6 +11,7 @@ async function init() {
   ui.updateActiveListItem($defaultActiveItem);
   const pokeID = $defaultActiveItem.dataset.id;
   ui.showPokeCard(pokeID);
+  ui.addButtonListeners();
 }
 
 
@@ -29,10 +30,7 @@ init();
 /* TODO:
         -flechas para la lista
         -un input para ir directamente a cierto pokemon
-        
-
-
-
+        -un DEFAULT_LIMIT por si en el futuro alguien quiere usar listas más grandes, aunque esto llevaría muchos cambios en las funciones de ui
 
 
 */

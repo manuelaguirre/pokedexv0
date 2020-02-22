@@ -3,6 +3,8 @@
 import * as sprites from './sprites.js';
 import * as pokeapi from './pokeapi.js';
 
+const DEFAULT_LIST_SIZE = 5;
+
 export function updateActiveListItem($item) {
   const $activeItem = document.querySelector('.pokemon-list-item.active');
   if ($activeItem) {
@@ -15,10 +17,16 @@ function getPokeIDFromURL(url) {
   return url.match(/\/\d\d*/)[0].substring(1); // returns the id number in the pokemon resource URL, avoiding the 2 in "../v2/..", after eliminating the preceding /
 }
 
+
+function updatePageDisplay(pageNumber, limit = DEFAULT_LIST_SIZE) {
+  const $pageDisplay = document.querySelector('#current-page');
+  $pageDisplay.innerHTML = `#${pageNumber + 1} - #${pageNumber + limit + 1}`;
+  $pageDisplay.dataset.page = pageNumber;
+  return undefined;
+}
+
 export async function showPokeCard(pokemonID) {
   const pokemonJSON = await pokeapi.getPokemonInfo(pokemonID);
-  const $pokecard = document.querySelector('#pokemon-card');
-
   const $sprite = document.querySelector('#pokemon-sprite>img');
   const $id = document.querySelector('#pokemon-id');
   const $name = document.querySelector('#pokemon-name');
@@ -45,13 +53,13 @@ export async function showPokeCard(pokemonID) {
   }
 }
 
-export async function showPokeList(offset = 0, limit = 5) {
+export async function showPokeList(offset = 0, limit = DEFAULT_LIST_SIZE) {
   const $pokeEntries = document.querySelectorAll('.pokemon-list-name');
   const $pokeListSprites = document.querySelectorAll('.list-sprite>img');
   const $pokeListItems = document.querySelectorAll('.pokemon-list-item');
   const pokeListJSON = await pokeapi.getPokemonList(offset);
 
-  for (let i = 0; i < pokeListJSON.results.length; i++) {
+  for (let i = 0; i < DEFAULT_LIST_SIZE; i++) {
     $pokeEntries[i].innerHTML = pokeListJSON.results[i].name;
     const pokeID = getPokeIDFromURL(pokeListJSON.results[i].url);
     $pokeListSprites[i].setAttribute('src', sprites.getPokemonSprite(pokeID));
@@ -65,5 +73,22 @@ export async function showPokeList(offset = 0, limit = 5) {
       const pokeID = $item.dataset.id;
       showPokeCard(pokeID);
     });
+  });
+
+  updatePageDisplay(offset);
+}
+
+export function addButtonListeners() {
+  const $previousButton = document.querySelector('#previous-button');
+  const $nextButton = document.querySelector('#next-button');
+
+
+  $previousButton.addEventListener('click', () => {
+    const currentPage = parseInt(document.querySelector('#current-page').dataset.page, 10);
+    showPokeList(currentPage - DEFAULT_LIST_SIZE);
+  });
+  $nextButton.addEventListener('click', () => {
+    const currentPage = parseInt(document.querySelector('#current-page').dataset.page, 10);
+    showPokeList(currentPage + DEFAULT_LIST_SIZE);
   });
 }
