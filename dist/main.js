@@ -28,9 +28,11 @@ window.showPokeList = ui.showPokeList;
 init();
 
 /* TODO:
-        -flechas para la lista
+        -que la lista pueda recorrerse con las flechitas del teclado
         -un input para ir directamente a cierto pokemon
         -un DEFAULT_LIMIT por si en el futuro alguien quiere usar listas más grandes, aunque esto llevaría muchos cambios en las funciones de ui
+        -corregir problemas del estilo "Nidorin-a" o "Tornadus-incarnate"
 
+                xflechas para la lista
 
 */
