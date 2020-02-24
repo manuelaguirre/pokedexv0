@@ -12,6 +12,7 @@ async function init() {
   const pokeID = $defaultActiveItem.dataset.id;
   ui.showPokeCard(pokeID);
   ui.addButtonListeners();
+  ui.addArrowKeyListeners();
 }
 
 
@@ -28,11 +29,13 @@ window.showPokeList = ui.showPokeList;
 init();
 
 /* TODO:
-        -que la lista pueda recorrerse con las flechitas del teclado
+
+        -pokeCARD RECTO/VERSO papaaa
+        -hacer que el pokecard tenga los colores proveídos por la PokéApi para cada PokéMon
         -un input para ir directamente a cierto pokemon
         -un DEFAULT_LIMIT por si en el futuro alguien quiere usar listas más grandes, aunque esto llevaría muchos cambios en las funciones de ui
         -corregir problemas del estilo "Nidorin-a" o "Tornadus-incarnate"
 
                 xflechas para la lista
-
+                xque la lista pueda recorrerse con las flechitas del teclado
 */
