@@ -9,6 +9,7 @@
   "author": "manuel aguirre",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^4.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-google": "^0.14.0",
@@ -16,6 +17,7 @@
     "eslint-plugin-react": "^7.18.3"
   },
   "dependencies": {
+    "chart.js": "^2.9.3",
     "pokemon-sprites": "github:pokeapi/sprites"
   }
 }
