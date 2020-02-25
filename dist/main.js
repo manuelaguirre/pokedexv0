@@ -15,14 +15,6 @@ async function init() {
   ui.addArrowKeyListeners();
 }
 
-
-async function testlog(jojo) {
-  const testResponse = await pokeapi.getPokemonList(jojo);
-  console.log(testResponse);
-  return testResponse;
-}
-
-window.testlog = testlog;
 window.showPokeCard = ui.showPokeCard;
 window.showPokeList = ui.showPokeList;
 

@@ -4,6 +4,8 @@ import * as sprites from './sprites.js';
 import * as pokeapi from './pokeapi.js';
 
 const DEFAULT_LIST_SIZE = 5;
+const TOTAL_POKEMON_COUNT = 807;
+
 
 export function updateActiveListItem($item) {
   const $activeItem = document.querySelector('.pokemon-list-item.active');
@@ -20,7 +22,7 @@ function getPokeIDFromURL(url) {
 
 function updatePageDisplay(pageNumber, limit = DEFAULT_LIST_SIZE) {
   const $pageDisplay = document.querySelector('#current-page');
-  $pageDisplay.innerHTML = `#${pageNumber + 1} - #${pageNumber + limit + 1}`;
+  $pageDisplay.innerHTML = `#${pageNumber + 1} - #${pageNumber + limit}`;
   $pageDisplay.dataset.page = pageNumber;
   return undefined;
 }
@@ -42,7 +44,7 @@ export async function showPokeCard(pokemonID) {
   $weight.innerHTML = `Weight ${pokemonJSON.weight}`;
 
   for (let index = 0; index < $stats.length; index++) {
-    $stats[index].innerHTML = pokemonJSON.stats[0].base_stat;
+    $stats[index].innerHTML = pokemonJSON.stats[index].base_stat;
   }
 
   $types.innerHTML = '';
@@ -89,14 +91,21 @@ async function offsetListBy(numberOfSteps) {
 }
 
 async function showPreviousPage() {
-  await offsetListBy(-DEFAULT_LIST_SIZE);
+  const currentPage = parseInt(document.querySelector('#current-page').dataset.page, 10);
+  if (currentPage <= DEFAULT_LIST_SIZE) {
+    await showPokeList(0); // resolve to showing first page
+  } else { await offsetListBy(-DEFAULT_LIST_SIZE); }
   const $activeItem = document.querySelector('.pokemon-list-item.active');
   selectPokemon($activeItem);
 }
 
 async function showNextPage() {
-  await offsetListBy(DEFAULT_LIST_SIZE);
-  const $activeItem = document.querySelector('.pokemon-list-item.active');
+  const currentPage = parseInt(document.querySelector('#current-page').dataset.page, 10);
+  if (currentPage > TOTAL_POKEMON_COUNT - 4) {
+    await showPokeList(TOTAL_POKEMON_COUNT - 4);// resolve to showing last page
+  } else {
+    await offsetListBy(DEFAULT_LIST_SIZE);
+  } const $activeItem = document.querySelector('.pokemon-list-item.active');
   selectPokemon($activeItem);
 }
 
