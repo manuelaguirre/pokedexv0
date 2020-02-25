@@ -101,8 +101,8 @@ async function showPreviousPage() {
 
 async function showNextPage() {
   const currentPage = parseInt(document.querySelector('#current-page').dataset.page, 10);
-  if (currentPage > TOTAL_POKEMON_COUNT - 4) {
-    await showPokeList(TOTAL_POKEMON_COUNT - 4);// resolve to showing last page
+  if (currentPage > TOTAL_POKEMON_COUNT - 9) {
+    await showPokeList(TOTAL_POKEMON_COUNT - 5);// resolve to showing last page
   } else {
     await offsetListBy(DEFAULT_LIST_SIZE);
   } const $activeItem = document.querySelector('.pokemon-list-item.active');
