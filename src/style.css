@@ -3,7 +3,7 @@
 @tailwind components;
 
 .typebadge{
-  @apply w-20; @apply inline-block; @apply text-center;
+  @apply w-20; @apply block; @apply text-center;
   @apply p-1;
   @apply font-semibold;
   @apply rounded-full;
