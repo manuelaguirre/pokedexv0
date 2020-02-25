@@ -39,7 +39,7 @@ export async function showPokeCard(pokemonID) {
 
   $id.innerHTML = `# ${pokemonJSON.id}`;
   $name.innerHTML = pokemonJSON.name;
-  $weight.innerHTML = `Weight: ${pokemonJSON.weight}`;
+  $weight.innerHTML = `Weight ${pokemonJSON.weight}`;
 
   for (let index = 0; index < $stats.length; index++) {
     $stats[index].innerHTML = pokemonJSON.stats[0].base_stat;
@@ -49,7 +49,8 @@ export async function showPokeCard(pokemonID) {
   for (let index = 0; index < pokemonJSON.types.length; index++) {
     const $newType = document.createElement('div');
     $types.appendChild($newType);
-    $newType.innerHTML = pokemonJSON.types[index].type.name.toUpperCase();
+    $newType.innerHTML = pokemonJSON.types[index].type.name;
+    $newType.classList.add('typebadge', `typebadge-${pokemonJSON.types[index].type.name}`);
   }
 }
 

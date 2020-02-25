@@ -18,8 +18,8 @@ export async function getPokemonList(offset = 0, limit = 5) {
 }
 
 export async function getPokemonInfo(pokemonID) {
-  const requestURL = `${BASE_URL}pokemon/${pokemonID}`;
 
+  const requestURL = `${BASE_URL}pokemon/${pokemonID}`;
   return fetch(requestURL)
     .then((response) => response.json())
     .then((responseJSON) => filterPokeJSON(responseJSON));

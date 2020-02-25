@@ -623,6 +623,106 @@ video {
   }
 }
 
+.typebadge{
+  width: 5rem; display: inline-block; text-align: center;
+  padding: 0.25rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.typebadge-bug{
+  background-color: olive;
+  color: gainsboro
+}
+
+.typebadge-fairy{
+  background-color: pink;
+  color: darkslategrey
+}
+
+.typebadge-dragon{
+  background-color: rgb(98, 13, 196);
+  color: gainsboro
+}
+
+.typebadge-dark{
+  background-color: darkslategray;
+  color: gainsboro
+}
+
+.typebadge-electric{
+  background-color: rgb(224, 203, 14);
+  color: darkslategray
+}
+
+.typebadge-fighting{
+  background-color: darkred;
+  color: gainsboro
+}
+
+.typebadge-fire{
+  background-color: orangered;
+  color: gainsboro
+}
+
+.typebadge-flying{
+  background-color: mediumslateblue;
+  color: gainsboro
+}
+
+.typebadge-ghost{
+  background-color: mediumpurple;
+  color: gainsboro
+}
+
+.typebadge-grass{
+  background-color: green;
+  color: gainsboro
+}
+
+.typebadge-ground{
+  background-color: peru;
+  color: gainsboro
+}
+
+.typebadge-ice{
+  background-color: #00adade5;
+  color: gainsboro
+}
+
+.typebadge-normal{
+  background-color: grey;
+  color: gainsboro
+}
+
+.typebadge-poison{
+  background-color: darkviolet;
+  color: gainsboro
+}
+
+.typebadge-psychic{
+  background-color: mediumvioletred;
+  color: gainsboro
+}
+
+.typebadge-rock{
+  background-color: saddlebrown;
+  color: gainsboro
+}
+
+.typebadge-steel{
+  background-color: ghostwhite ;
+  color: darkslategray
+}
+
+.typebadge-water{
+  background-color: dodgerblue;
+  color: gainsboro
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -13967,108 +14067,6 @@ video {
 
 .active{
   background-color: gainsboro;
-}
-
-.lds-ellipsis {
-  display: inline-block;
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
-
-.lds-ellipsis div {
-  position: absolute;
-  top: 33px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
-          animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-
-.lds-ellipsis div:nth-child(1) {
-  left: 8px;
-  -webkit-animation: lds-ellipsis1 0.6s infinite;
-          animation: lds-ellipsis1 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(2) {
-  left: 8px;
-  -webkit-animation: lds-ellipsis2 0.6s infinite;
-          animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(3) {
-  left: 32px;
-  -webkit-animation: lds-ellipsis2 0.6s infinite;
-          animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(4) {
-  left: 56px;
-  -webkit-animation: lds-ellipsis3 0.6s infinite;
-          animation: lds-ellipsis3 0.6s infinite;
-}
-
-@-webkit-keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@-webkit-keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0);
-  }
-}
-
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0);
-  }
-}
-
-@-webkit-keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(24px, 0);
-  }
-}
-
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(24px, 0);
-  }
 }
 
 @media (min-width: 640px) {
@@ -67446,4 +67444,3 @@ video {
     transition-duration: 1000ms;
   }
 }
-  
