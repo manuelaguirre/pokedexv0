@@ -7,10 +7,11 @@
         <title>Pokédex!</title>
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body class="bg-blue-400 align-middle justify-center flex-shrink-0">
+        <h1 class="m-auto p-4">La Pokédex de la gente.</h1>
         <div class="md:flex m-auto bg-red-100 justify-center p-4
             max-w-3xl rounded-b">
-
             <div id="pokemon-list-container" class="m-8 md:w-1/2 rounded align"><ul
                     id="pokemon-list"
                     class="list-reset
@@ -62,7 +63,7 @@
                             inline-block">name-5</div></li>
                 </ul>
 
-                <div id="button-container" class="flex justify-around mt-4">
+                <div id="button-container" class="flex justify-between mt-4">
                     <button id="previous-button" class="block bg-teal-600
                         hover:bg-teal-700
                         text-white
@@ -70,7 +71,8 @@
                         text-center">
                         Previous
                     </button>
-                    <span id="current-page" class="py-2 px-auto font-bold
+                    <span id="current-page" class="py-2 px-auto
+                        font-bold
                         text-teal-900"></span>
                     <button id="next-button" class="block bg-teal-600
                         hover:bg-teal-700
@@ -82,40 +84,49 @@
                 </div></div>
 
             <div id="pokemon-card" class="m-8 md:w-1/2
-                bg-indigo-400 rounded shadow-lg">
+                bg-gray-400 rounded shadow-lg">
 
                 <div id="card-header" class="flex w-full py-4">
-                    <div id="pokemon-sprite" class="inline-flex"><img src=""
+                    <div id="pokemon-sprite" class="ml-4 w-32"><img
+                            src=""
                             alt=""></div><div
                         class="block align-middle w-full">
                         <div id="pokemon-id" class="block
                             font-extrabold text-center text-3xl">#1</div>
                         <div id="pokemon-name" class="block
                             text-center font-bold text-2xl capitalize mx-4">Bulbasaur</div></div></div>
-                <div id="pokemon-weight" class="ml-4 block">100</div>
                 <div id="card-body" class="inline-flex justify-between w-full">
                     <table
-                        id="pokemon-stats" class="ml-4 table-auto inline-flex">
-                        <tr><td>Speed</td>
-                            <td id="speed-stat" class="pokemon-stat">25</td></tr>
-                        <tr><td>Sp. Def</td>
-                            <td id="spdef-stat" class="pokemon-stat">35</td></tr>
-                        <tr><td>Sp. Atk</td>
-                            <td id="spatk-stat" class="pokemon-stat">28</td></tr>
-                        <tr><td>Attack</td>
-                            <td id="attack-stat" class="pokemon-stat">29</td></tr>
-                        <tr><td>Defense</td>
-                            <td id="defense-stat" class="pokemon-stat">40</td></tr>
-                        <tr><td>HP</td>
-                            <td id="hp-stat" class="pokemon-stat">50</td></tr>
-                    </table> <div id="pokemon-types" class="block
-                        border-black
-                        border-2">Poison</div>
+                        id="pokemon-stats" class="ml-4 table-auto inline-flex
+                        p-2 font-semibold uppercase tracking-wider">
+                        <tr><td class="px-4 py-1">Speed</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="speed-stat"
+                                class="pokemon-stat">25</td class="px-4 py-1"></tr>
+                        <tr><td class="px-4 py-1">Sp. Def</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="spdef-stat"
+                                class="pokemon-stat">35</td class="px-4 py-1"></tr>
+                        <tr><td class="px-4 py-1">Sp. Atk</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="spatk-stat"
+                                class="pokemon-stat">28</td class="px-4 py-1"></tr>
+                        <tr><td class="px-4 py-1">Attack</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="attack-stat"
+                                class="pokemon-stat">29</td class="px-4 py-1"></tr>
+                        <tr><td class="px-4 py-1">Defense</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="defense-stat"
+                                class="pokemon-stat">40</td class="px-4 py-1"></tr>
+                        <tr><td class="px-4 py-1">HP</td class="px-4 py-1">
+                            <td class="px-4 py-1" id="hp-stat"
+                                class="pokemon-stat">50</td class="px-4 py-1"></tr>
+                    </table> <div id="pokemon-other block"><div
+                            id="pokemon-types"
+                            class="block p-4 m-2">Poison</div>
+                        <div id="pokemon-weight" class="mt-1 p-8f block
+                            text-center uppercase font-semibold">100</div>
+                    </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <script src="main.js" type="module"></script>
-    </body>
-</html>
+            <script src="main.js" type="module"></script>
+        </body>
+    </html>
