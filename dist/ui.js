@@ -110,8 +110,8 @@ async function showNextPage() {
 }
 
 async function showPreviousPokemon() {
-  const isActive = (element) => element.classList.contains('active');
   const $pokeListItems = document.querySelectorAll('.pokemon-list-item');
+  const isActive = (element) => element.classList.contains('active');
   const $indexOfActive = Array.from($pokeListItems).findIndex(isActive);
   if ($indexOfActive <= 0) {
     await offsetListBy(-1);
@@ -123,8 +123,8 @@ async function showPreviousPokemon() {
 }
 
 async function showNextPokemon() {
-  const isActive = (element) => element.classList.contains('active');
   const $pokeListItems = document.querySelectorAll('.pokemon-list-item');
+  const isActive = (element) => element.classList.contains('active');
   const $indexOfActive = Array.from($pokeListItems).findIndex(isActive);
   if ($indexOfActive >= (DEFAULT_LIST_SIZE - 1)) {
     await offsetListBy(1);
