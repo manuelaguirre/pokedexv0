@@ -4,7 +4,8 @@
   "description": "pokedex",
   "main": "main.js",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o dist/style.css"  
+    "build:css": "tailwind build src/style.css -o dist/style.css",
+    "start": "node dist/main.js"  
   },
   "author": "manuel aguirre",
   "license": "ISC",
@@ -20,5 +21,6 @@
     "chart.js": "^2.9.3",
     "pokemon-sprites": "github:pokeapi/sprites"
   },
-  "engines": {"node":"8.10.0"}
+  "engines": {"node":"8.10.0",
+  "npm":"3.5.2"}
 }
