@@ -17,10 +17,6 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3"
   },
-  "dependencies": {
-    "chart.js": "^2.9.3",
-    "pokemon-sprites": "github:pokeapi/sprites"
-  },
   "engines": {"node":"8.10.0",
   "npm":"3.5.2"}
 }
