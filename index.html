@@ -6,18 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Pokédex!</title>
         <link rel="stylesheet" href="dist/style.css">
+        <link rel="icon" href="./assets/pokedex.svg">
     </head>
 
     <body class="bg-blue-400 align-middle justify-center flex-shrink-0">
-        <div class="inline-block text-center"><h1 class="ml-4 max-w-2xl p-4
-                text-2xl">Pokédex!</h1></div>
+        <div class="flex flex-shrink-0 ml-4 max-w-2xl p-4
+            text-2xl"><div id="logo"><img
+                    src="./assets/pokedex.svg" height="64" width="64"
+                    alt="Pokédex!" />
+            </div><h1 class="font-bold">Pokédex!</h1></div>
         <div class="md:flex m-auto bg-red-100 justify-center p-4
             max-w-3xl rounded">
-            <div id="pokemon-list-container" class="m-8 md:w-1/2 rounded align"><ul
+            <div id="pokemon-list-container" class="m-8 md:w-1/2 rounded
+                align"><ul
                     id="pokemon-list"
                     class="list-reset
                     flex flex-col shadow-lg">
-                    <li class="pokemon-list-item hover:shadow-inner rounded-t
+                    <li class="pokemon-list-item hover:shadow-inner
+                        rounded-t
                         relative -mb-px block
                         border p-4
                         border-grey bg-teal-600"><div class="list-sprite h-6
@@ -54,7 +60,8 @@
                             class="pokemon-list-name mx-4 text-gray-900
                             font-semibold capitalize
                             inline-block">name-4</div></li>
-                    <li class="pokemon-list-item hover:shadow-inner rounded-b
+                    <li class="pokemon-list-item hover:shadow-inner
+                        rounded-b
                         relative block border
                         p-4 border-grey bg-teal-600"><div
                             class="list-sprite h-6 w-10 inline-block ml-4"><img
@@ -69,7 +76,8 @@
                     <button id="previous-button" class="block bg-teal-600
                         hover:bg-teal-700
                         text-white
-                        font-bold py-2 px-auto rounded-l-md rounded-r-sm w-24
+                        font-bold py-2 px-auto rounded-l-md rounded-r-sm
+                        w-24
                         text-center">
                         Previous
                     </button>
@@ -79,7 +87,8 @@
                     <button id="next-button" class="block bg-teal-600
                         hover:bg-teal-700
                         text-white
-                        font-bold py-2 px-auto rounded-l-sm rounded-r-md w-24
+                        font-bold py-2 px-auto rounded-l-sm rounded-r-md
+                        w-24
                         text-center">
                         Next
                     </button>
@@ -96,25 +105,36 @@
                         <div id="pokemon-id" class="block
                             font-extrabold text-center text-3xl">#1</div>
                         <div id="pokemon-name" class="block
-                            text-center font-bold text-2xl capitalize mx-auto">Bulbasaur</div></div></div>
-                <div id="card-body" class="inline-flex justify-between w-full
+                            text-center font-bold text-2xl capitalize
+                            mx-auto">Bulbasaur</div></div></div>
+                <div id="card-body" class="inline-flex justify-between
+                    w-full
                     mt-6">
                     <table
                         id="pokemon-stats" class="table-fixed p-auto
                         font-semibold uppercase tracking-wider">
-                        <tr><td class="px-4 py-1">Speed</td class="px-4 py-1">
-                            <td class="pokemon-stat px-2 py-1" id="speed-stat"
+                        <tr><td class="px-4 py-1">Speed</td class="px-4
+                                py-1">
+                            <td class="pokemon-stat px-2 py-1"
+                                id="speed-stat"
                                 class=>25</td class="px-4 py-1"></tr>
-                        <tr><td class="px-4 py-1">Sp. Def</td class="px-4 py-1">
-                            <td class="pokemon-stat px-2 py-1" id="spdef-stat"
+                        <tr><td class="px-4 py-1">Sp. Def</td class="px-4
+                                py-1">
+                            <td class="pokemon-stat px-2 py-1"
+                                id="spdef-stat"
                                 class=>35</td class="px-4 py-1"></tr>
-                        <tr><td class="px-4 py-1">Sp. Atk</td class="px-4 py-1">
-                            <td class="pokemon-stat px-2 py-1" id="spatk-stat"
+                        <tr><td class="px-4 py-1">Sp. Atk</td class="px-4
+                                py-1">
+                            <td class="pokemon-stat px-2 py-1"
+                                id="spatk-stat"
                                 class=>28</td class="px-4 py-1"></tr>
-                        <tr><td class="px-4 py-1">Attack</td class="px-4 py-1">
-                            <td class="pokemon-stat px-2 py-1" id="attack-stat"
+                        <tr><td class="px-4 py-1">Attack</td class="px-4
+                                py-1">
+                            <td class="pokemon-stat px-2 py-1"
+                                id="attack-stat"
                                 class=>29</td class="px-4 py-1"></tr>
-                        <tr><td class="px-4 py-1">Defense</td class="px-4 py-1">
+                        <tr><td class="px-4 py-1">Defense</td class="px-4
+                                py-1">
                             <td class="pokemon-stat px-2 py-1"
                                 id="defense-stat"
                                 class=>40</td class="px-4 py-1"></tr>
