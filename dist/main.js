@@ -1,8 +1,6 @@
-import * as pokeapi from './pokeapi.js';
 import * as ui from './ui.js';
 
 const INIT_LIST_ID = 0;
-const BASE_URL = 'https://pokeapi.co/api/v2/';
 const myStorage = window.localStorage;
 
 async function init() {
@@ -12,6 +10,7 @@ async function init() {
   const pokeID = $defaultActiveItem.dataset.id;
   ui.showPokeCard(pokeID);
   ui.addButtonListeners();
+  ui.addSearchListeners();
   ui.addArrowKeyListeners();
 }
 

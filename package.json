@@ -5,22 +5,28 @@
   "main": "main.js",
   "scripts": {
     "build:css": "tailwind build src/style.css -o dist/style.css",
-    "start": "index.html"
-    
+    "start": "index.html",
+    "test": "jest"
   },
   "author": "manuel aguirre",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.0.2",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "babel-jest": "^25.2.6",
+    "cypress": "^4.3.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-react": "^7.18.3"
+    "eslint-plugin-react": "^7.18.3",
+    "jest": "^25.2.7"
   },
   "dependencies": {
     "chart.js": "^2.9.3",
     "pokemon-sprites": "github:pokeapi/sprites"
   },
-  "engines": {"node":"8.10.0"}
+  "engines": {
+    "node": "8.10.0"
+  }
 }

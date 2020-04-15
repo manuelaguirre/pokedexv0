@@ -147,6 +147,28 @@ export function addButtonListeners() {
     showNextPage();
   });
 }
+function keyboardSearchHandler(e) {
+  e = e || window.event;
+  if (e.keyCode === 13) {
+    showPokeList(+e.target.value - 1);
+    showPokeCard(e.target.value);
+    e.target.value = '';
+  }
+}
+function clickSearchHandler(e) {
+  const $input = document.querySelector('#search-input');
+  e = e || window.event;
+  showPokeList(+$input.value - 1);
+  showPokeCard($input.value);
+  $input.value = '';
+}
+
+export function addSearchListeners() {
+  const $input = document.querySelector('#search-input');
+  const $button = document.querySelector('#search-button');
+  $input.addEventListener('keyup', keyboardSearchHandler);
+  $button.addEventListener('click', clickSearchHandler);
+}
 
 function onArrowKeyUp() {
   showPreviousPokemon();
