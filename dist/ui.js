@@ -147,8 +147,24 @@ export function addButtonListeners() {
     showNextPage();
   });
 }
+
+function validateSearch(pokeID) {
+  if (pokeID < 0 || pokeID > TOTAL_POKEMON_COUNT) {
+    throw new Error('Pokémon ID out of range');
+  }
+  if (pokeID === NaN) {
+    throw new Error('Please search by number');
+  }
+}
+
 function keyboardSearchHandler(e) {
   e = e || window.event;
+  try {
+    validateSearch(+e.target.value);
+  } catch (error) {
+    e.target.value = '';
+    showError(error);
+  }
   if (e.keyCode === 13) {
     showPokeList(+e.target.value - 1);
     showPokeCard(e.target.value);
@@ -157,10 +173,12 @@ function keyboardSearchHandler(e) {
 }
 function clickSearchHandler(e) {
   const $input = document.querySelector('#search-input');
+  const $defaultActiveItem = document.querySelector('.pokemon-list-item');
   e = e || window.event;
   showPokeList(+$input.value - 1);
+  updateActiveListItem($defaultActiveItem);
   showPokeCard($input.value);
-  $input.value = '';
+  $input.value = null;
 }
 
 export function addSearchListeners() {
@@ -198,4 +216,16 @@ export function addArrowKeyListeners() {
     }
   }
   document.onkeydown = checkKey;
+}
+
+function hideErrors() {
+  const $errorMessage = document.querySelector('#error-message');
+  $errorMessage.classList.add('hidden');
+  $errorMessage.innerHTML = '';
+}
+
+function showError(error) {
+  const $errorMessage = document.querySelector('#error-message');
+  $errorMessage.classList.remove('hidden');
+  $errorMessage.innerHTML = error;
 }
